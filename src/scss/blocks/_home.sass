@@ -1,0 +1,93 @@
+.home
+    margin-top: $ui-step * 15.75
+    &__container 
+        padding-top: $ui-step * 12.5
+        padding-bottom: $ui-step * 40
+    &__wrapper
+        display: flex
+        align-items: center
+        column-gap: $ui-step * 5
+        justify-content: space-between
+        position: relative
+        z-index: var(--ui-index-1)
+        @media screen and ( max-width: 999px )
+            flex-direction: column 
+    &-text
+        display: flex
+        flex-direction: column
+        row-gap: $ui-step * 2
+        @media screen and ( max-width: 999px )
+            text-align: center
+            align-items: center
+        .home-text__category
+            @include text(1rem, var(--light-green), 400, .48px, 14px)
+        .home-text__title
+            @include text(4.5rem, var(--black-2), 400, .48px, 64px)
+            max-width: 500px
+            @media screen and ( max-width: 599px )
+                font-size: 3rem 
+                max-width: 340px
+            @media screen and ( max-width: 399px )
+                font-size: 1.2rem
+            @media screen and ( max-width: 299px )
+                font-size: 1.1rem
+        .home-text__desc
+            @include text(1.2rem, var(--black-2), 400, .48px, 26px)
+            max-width: 400px
+            @media screen and ( max-width: 450px )
+                max-width: 350px
+                font-size: 1rem
+    &-content
+        position: relative
+        width: clamp(12.5rem, 5.328rem + 40.98vw, 37.5rem)
+        height: 510px
+        margin-left: 5rem
+        @media screen and ( max-width: 999px )
+            margin-top: 3rem
+        @media screen and ( max-width: 450px )
+            margin-left: 6rem
+        @media screen and ( max-width: 399px )
+            margin-top: 5rem
+        .home-content__picture
+            position: absolute
+            top: 0
+            .content-picture__info
+                position: absolute 
+
+                background: #ffffff85
+                display: flex
+                column-gap: $ui-step * 3
+                align-items: center
+                border-radius: $ui-step * 7.5
+                padding: $ui-step $ui-step * 4
+                img
+                    border-radius: 50%
+                .info-user
+                    @include text(1.14rem, var(--black-2), 400, .48px, 16px)
+        .home-content__picture-1
+            bottom: 0 
+            left: -$ui-step * 18
+            img[alt="Lee Stone"]  
+                border-radius: 2.14rem
+            .content-picture__info
+                top: 0
+                left: -$ui-step * 15
+                @media screen and ( max-width: 450px )
+                    left: -$ui-step * 10
+                @media screen and ( max-width: 399px )
+                    left: $ui-step * 20
+                    top: -$ui-step * 5
+
+        .home-content__picture-2
+            right: 0
+            top: $ui-step * 25
+            @media screen and ( max-width: 599px )
+                top: $ui-step * 40
+            @media screen and ( max-width: 399px )
+                right: $ui-step * 3
+            img[alt="Mia Potter"]  
+                border-radius: 2.14rem
+                flex-shrink: 0
+            .content-picture__info
+                bottom: 0
+                left: -$ui-step * 22.5
