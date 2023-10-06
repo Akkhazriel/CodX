@@ -1,0 +1,103 @@
+.header
+    &__container
+        padding-top: 1rem
+        padding-bottom: 1rem
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        align-items: center
+        column-gap: $ui-step * 8
+    &__nav
+        display: flex
+        align-items: center
+        column-gap: $ui-step * 11.5
+        .nav
+            @media screen and ( max-width: 799px )
+                position: absolute
+                left: -100%
+                top: 0
+                width: 90%
+                height: 100vh
+                background: red
+                z-index: var(--ui-index-6)
+                display: flex
+                transition: 500ms ease
+                &.active
+                    left: 0
+            .nav__list
+                display: flex
+                align-items: center
+                column-gap: $ui-step * 12
+                @media screen and ( max-width: 799px )
+                    flex-direction: column
+                    margin: auto
+                    row-gap: $ui-step * 12
+                .nav__link 
+                    @include text(1rem, var(--black), 400, .48px, 16px)
+                    position: relative
+                    transition: 500ms linear
+                    @media screen and ( max-width: 799px )
+                        @include text(2rem, var(--black), 600, .48px, 16px)
+                    &::after
+                        position: absolute
+                        content: ''
+                        width: 0
+                        height: 1px
+                        background: var(--light-green)
+                        bottom: 0
+                        left: 50%
+                        right: 50%
+                        transition: .3s linear
+                    &:hover
+                        @include text(1re, var(--pink), 400, .48px, 16px)
+                        transition: 500ms linear
+                        &::after
+                            width: 100%
+                            right: 0
+                            left: 0
+    &__menu
+        display: flex
+        align-items: center
+        column-gap: $ui-step * 12
+        .header-media
+            display: flex
+            column-gap: $ui-step * 4.5
+        .header__btn
+            @include button(11px, 15px, 11px, 15px, $ui-step * 5, 1rem, 400, .48px, 14px, var(--black-2), var(--white), 1px solid transparent)
+            transition: .3s linear
+            &:hover,&:active,&:focus
+                transition: .3s linear
+                border: 1px solid var(--black-2)
+                background: transparent
+                color: var(--black-2)
+        .nav-menu
+            display: none
+            @media screen and ( max-width: 799px )
+                display: block
+                height: 18px 
+                width: 30px
+                position: relative
+                cursor: pointer 
+                z-index: var(--ui-index-5)
+                span
+                    transition: .3s linear
+                    top: calc(50% - 1px)
+                    left: 0
+                    position: absolute
+                    width: 100%
+                    height: 2px
+                    background: #000
+                    &:first-child
+                        top: 0
+                    &:last-child
+                        top: auto
+                        bottom: 0
+                &.active
+                    span
+                        transform: scale(0)
+                        &:first-child
+                            transform: rotate(-45deg)
+                            top: calc(50% - 1px)
+                        &:last-child
+                            transform: rotate(45deg)
+                            bottom: calc(50% - 1px)

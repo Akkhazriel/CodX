@@ -1,0 +1,38 @@
+:root
+    // z-index
+    --ui-index-1: 1 // Для наползающих элементов в общем потоке
+    --ui-index-2: 2 // Для наползающих элементов в общем потоке
+    --ui-index-3: 3 // Для масок
+    --ui-index-4: 4 // Для сайдбаров
+    --ui-index-5: 5 // Для модальных окон
+    --ui-index-6: 6 // Для элементов перекрывающих все
+    // Colors
+    --black: #222222
+    --white: #FFFFFF
+    --black-2: #2f2f2f
+    --light-green: #82cbac
+    --pink: #FF7F96
+    --yellow: #EAD71B
+
+// Vars SASS
+$ui-step: 4px
+
+@mixin button($padding-top, $padding-right, $padding-bottom, $padding-left, $border-radius, $fz, $fw, $lt, $lh, $bgcolor, $color, $border)
+    padding: $padding-top $padding-right $padding-bottom $padding-left
+    background: $bgcolor
+
+    border: $border
+    border-radius: $border-radius
+
+    font-size: $fz
+    font-weight: $fw
+    color: $color
+    text-align: center 
+    align-items: center
+
+@mixin text ($fz, $color, $fw, $lt, $lh)
+    font-size: $fz
+    color: $color
+    font-weight: $fw
+    letter-spacing: $lt
+    line-height: $lh
