@@ -1,0 +1,30 @@
+.scroller
+    &__container
+        max-width: 1430px
+    .scroller__inner
+        display: flex
+        flex-wrap: wrap
+        padding-block: 1rem
+
+    .scroller__container[data-animated='true']
+        overflow: hidden
+        
+        -webkit-mask: linear-gradient(90deg, transparent, #ffffff 20%, #FFFFFF 80%, transparent)
+        mask: linear-gradient(90deg, transparent, #ffffff 20%, #FFFFFF 80%, transparent) 
+
+        .scroller__inner
+            width: max-content
+            flex-wrap: nowrap
+            animation: 
+                scroller 
+                var(--_animation-duration, 40s) 
+                var(--_animtaion-direction, forwards)
+                linear 
+                infinite
+    // Если нужно изменить направление, использовать дата атрибуты
+    // .scroller__container[data-direction="right"]
+    //     --_animation-direction: reverse
+
+@keyframes scroller
+    to
+        transform: translate(calc(-50% - .5rem))
