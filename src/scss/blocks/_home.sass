@@ -3,6 +3,10 @@
     &__container 
         padding-top: $ui-step * 12.5
         padding-bottom: $ui-step * 40
+        @media screen and ( max-width: 399px )
+            padding-bottom: $ui-step * 10
+        @media screen and ( max-width: 299px )
+            padding-bottom: $ui-step
     &__wrapper
         display: flex
         align-items: center
@@ -29,6 +33,7 @@
                 max-width: 340px
             @media screen and ( max-width: 399px )
                 font-size: 1.2rem
+                font-weight: 600
             @media screen and ( max-width: 299px )
                 font-size: 1.1rem
         .home-text__desc
