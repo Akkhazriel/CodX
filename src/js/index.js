@@ -8,6 +8,7 @@ window.addEventListener('DOMContentLoaded', rebuildMenu);
 
 // Вызов функции при изменении размера окна
 window.addEventListener('resize', rebuildMenu);
-
+// Бесконечная лента
 scroller();
+// Тогл кнопок
 employersBtnToggle();

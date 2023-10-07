@@ -1,0 +1,53 @@
+.skills
+    margin-top: $ui-step * 24
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        align-items: center
+        column-gap: $ui-step * 4
+        @media screen and ( max-width: 650px )
+            flex-direction: column
+            row-gap: $ui-step * 4
+            text-align: center
+            justify-content: center
+    &-list
+        display: flex
+        flex-direction: column
+        max-width: $ui-step * 146.25
+        row-gap: $ui-step * 8
+
+        max-width: 585px
+        flex: 1
+        @media screen and ( max-width: 650px )
+            order: 2
+        .skills-item
+            display: flex
+            flex-direction: column
+            row-gap: $ui-step * 3
+            @media screen and ( max-width: 650px )
+                align-items: center
+            .item-count
+                @include text(1.2rem, var(--white), 400, .48px, 1.2rem)
+                border-radius: 2.2rem
+                background: var(--pink)
+                padding: $ui-step * 2 $ui-step * 5
+                max-width: $ui-step * 15
+            &:first-child
+                .item-count
+                    border-radius: 2.2rem
+                    background: var(--light-green)
+            &:last-child
+                .item-count
+                    border-radius: 2.2rem
+                    background: var(--yellow)
+            .item-title
+                @include text(3.2rem, var(--black-2), 700, .48px, 3.2rem)
+            .item-desc
+                @include text(1.3rem, var(--black-2), 400, .48px, 2rem)
+                max-width: 430px
+    .skills-pic
+        display: flex
+        max-width: 552px
+        flex: 1
+        img
+            border-radius: $ui-step * 8
