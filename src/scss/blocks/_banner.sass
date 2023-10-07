@@ -1,0 +1,31 @@
+.banner
+    background-color: #82CBAC
+    margin-top: $ui-step * 50
+    position: relative
+    &__container
+        padding-top: $ui-step * 20
+        padding-bottom: $ui-step * 20
+    &__wrapper
+        display: flex
+        flex-direction: column
+    &-title
+        @include text(4.6rem, var(--black-2), 400, .48px, 4.6rem)
+        max-width: $ui-step * 162.5
+        @media screen and ( max-width: 336px )
+            font-size: 3rem
+        @media screen and ( max-width: 299px )
+            font-size: 2rem
+            font-weight: 600
+    &-desc 
+        max-width: $ui-step * 162.5
+        @include text(1.8rem, var(--black-2), 400, .48px, 2.2rem)
+        margin-top: $ui-step * 8
+        @media screen and ( max-width: 336px )
+            font-size: 1.2rem
+        @media screen and ( max-width: 299px )
+            margin-top: $ui-step * 4
+            
+    &-btn 
+        max-width: $ui-step * 51.75
+        margin-top: $ui-step * 12
+        @include button($ui-step * 3, $ui-step * 10, $ui-step * 3, $ui-step * 10, 0, 1rem, 400, .48px, 1rem, var(--black-2), var(--white), none)
