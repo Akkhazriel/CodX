@@ -1,0 +1,57 @@
+.faq
+    margin-top: $ui-step * 15
+    &__wrapper
+        display: flex
+        flex-direction: column
+    &-title
+        @include text(4.2rem, var(--black-2), 400, .48px, 4.2rem)
+    &-list
+        display: flex
+        flex-direction: column
+        row-gap: $ui-step * 7
+        @media screen and ( max-width: 399px )
+            row-gap: $ui-step * 2
+        .faq__item
+            position: relative
+            width: 100%
+            z-index: 4
+            margin-top: $ui-step * 15
+            padding: $ui-step * 8 $ui-step * 6
+            &.active .faq-body
+                transform: rotate(0)
+                transtion: .3s linear
+            &.active svg
+                transform: rotate(180deg)
+                transition: .3s linear
+            .faq-header
+                display: flex
+                align-items: center
+                justify-content: space-between
+                column-gap: $ui-step * 5
+                .faq-value
+                    @include text(1.2rem, var(--black-2), 400, .48px, 1.2rem)
+                    @media screen and ( max-width: 599px )
+                        max-width: $ui-step * 70
+                    @media screen and ( max-width: 399px )
+                        max-width: $ui-step * 40
+                        font-size: 1rem
+                    @media screen and ( max-width: 299px )
+                        max-width: $ui-step * 30
+                        font-size: .8rem
+
+                svg
+                    transition: .3s linear
+                cursor: pointer
+            .faq-body
+                display: block
+                transform-origin: 0 0
+                transform: rotateX(90deg)
+                position: absolute
+                left: 0
+                right: 0
+                top: 100%
+                transition: .3s linear
+                @media screen and ( max-width: 599px )
+                    padding: 0 28px
+                @media screen and ( max-width: 399px )
+                    font-size: 1rem

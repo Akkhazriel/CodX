@@ -4,6 +4,7 @@ import { scroller } from "./modules/scroller";
 import { employersBtnToggle } from "./modules/employersBtn-toggle";
 import { collectionLoad } from "./modules/collection-viewAll";
 import { nftLoad } from "./modules/nft-view";
+import { select } from "./modules/faq-dropdown";
 
 toggleMenuHeader();
 window.addEventListener('DOMContentLoaded', rebuildMenu);
@@ -18,3 +19,5 @@ employersBtnToggle();
 collectionLoad();
 // Секция NFT -> кнопка выгрузки
 nftLoad();
+// FAQ -> Выпадающее меню
+select();
