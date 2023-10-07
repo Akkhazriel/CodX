@@ -1,0 +1,48 @@
+.nft
+    margin-top: $ui-step * 26
+    &__wrapper
+        display: flex
+        flex-direction: column
+        align-items: center
+    &-title
+        @include text(4.2rem, var(--black-2), 700, .48px, 4.2rem)
+    &-list
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: $ui-step * 9
+        align-self: center
+        margin-top: $ui-step * 4
+        @media screen and ( max-width: 1099px )
+            grid-template-columns: repeat(2, 1fr)
+        @media screen and ( max-width: 659px )
+            grid-template-columns: repeat(1, 1fr)
+        .list-item 
+            display: flex
+            flex-direction: column
+            .item-content
+                display: flex
+                justify-content: space-between
+                padding: $ui-step * 5 $ui-step * 8
+                align-items: center
+                @media screen and ( max-width: 399px )
+                    flex-direction: column
+                    row-gap: $ui-step * 5
+                .content-name
+                    display: flex
+                    column-gap: $ui-step * 2
+                    @include text(1.2rem, var(--black-2), 400, .48px, 1.2rem)
+                    span
+                        font-weight: 600
+                .content-btns
+                    display: flex
+                    column-gap: $ui-step * 2
+                    button[data-btn-view]
+                        background: #00000030
+                        padding: $ui-step * 2.5 $ui-step * 3
+                    button[data-btn-lock]
+                        background: #FF7F9670
+                        padding: $ui-step * 3 $ui-step * 4
+                        border-radius: 50%
+    &-btn
+        @include button($ui-step * 3, $ui-step * 10, $ui-step *3, $ui-step * 10, 0, 1rem, 700, .48px, 1rem, var(--black-2), var(--white), none)
+        margin-top: $ui-step * 16
