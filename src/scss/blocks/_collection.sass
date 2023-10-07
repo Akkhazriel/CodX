@@ -1,0 +1,33 @@
+.collection
+    margin-top: $ui-step * 25.25
+    &__wrapper
+        display: flex
+        flex-direction: column
+        align-items: center
+    &-title
+        @include text(4.6rem, var(--black-2), 400, .48px, 4.6rem)
+        text-align: center
+    &__list
+        display: grid
+        gap: $ui-step * 16
+        grid-template-columns: repeat(3, 1fr)
+        @media screen and ( max-width: 799px )
+            grid-template-columns: repeat(1, 1fr)
+            justify-content: center
+        .list-item
+            display: flex
+            flex-direction: column
+            max-width: $ui-step * 89.5
+            margin-top: $ui-step * 18.5
+            .item-title
+                @include text(1.8rem, var(--black-2), 700, .48px, 1.8rem)
+                
+                padding-top: $ui-step * 7
+                padding-left: $ui-step * 7
+            .item-img
+                flex: 1
+                img
+                    border-radius: $ui-step * 8 $ui-step * 8 0 0
+    &-btn
+        margin-top: $ui-step * 16
+        @include button($ui-step * 3, $ui-step * 10, $ui-step * 3, $ui-step * 10, 0, 1rem, 700, .48px, 1rem, var(--black-2), var(--white), none)
