@@ -1,0 +1,105 @@
+.footer
+    &__wrapper
+        padding: $ui-step * 24 $ui-step * 16 $ui-step * 6 $ui-step * 16
+        display: flex
+        flex-direction: column
+        row-gap: $ui-step * 25
+        @media screen and ( max-width: 1199px )
+            padding: $ui-step * 24 0 $ui-step * 6 0
+            text-align: center
+            justify-content: center
+            
+    &-nav
+        display: flex
+        column-gap: $ui-step * 18
+        @media screen and ( max-width: 999px )
+            flex-wrap: wrap
+            row-gap: $ui-step * 18
+            justify-content: center
+            align-items: center
+        .nav-socials
+            display: flex
+            flex-direction: column
+            .socials-cta
+                margin-top: $ui-step * 12
+            .footer-media
+                margin-top: $ui-step * 5
+                display: flex
+                column-gap: $ui-step * 5
+        .nav-links
+            display: flex 
+            flex-direction: column
+            row-gap: $ui-step * 4
+            .link-title
+                @include text(1.8rem, var(--black-2), 400, .48px, 1.8rem)
+            .link-list
+                display: flex
+                flex-direction: column
+                row-gap: $ui-step * 2
+                .nav-list__link
+                    @include text(1rem, var(--black-2), 400, .48px, 1rem)
+                    cursor: pointer
+        .footer-form
+            max-width: $ui-step * 115
+            margin-left: $ui-step * 10
+            display: flex
+            flex-direction: column
+            row-gap: $ui-step * 4
+            @media screen and ( max-width: 499px )
+                text-align: center
+                margin-left: 0
+
+            .footer-form__title
+                @include text(2.3rem, var(--black-2), 400, .48px, 2rem)
+            .footer-form__desc
+                @include text(1.4rem, var(--black-2), 400, .48px, 1.4rem)
+                @media screen and ( max-width: 299px )
+                    font-size: 1rem
+            .form-components
+                display: flex
+                column-gap: $ui-step * 2
+                @media screen and ( max-width: 499px )
+                    flex-direction: column
+                    row-gap: $ui-step * 2
+                    margin: 0 auto
+                    align-items: center
+                    justify-content: center 
+                    text-align: center
+                .form-input
+                    width: $ui-step * 81.75
+                    background: #F6F6F6
+                    padding: $ui-step * 3 0 $ui-step * 3 $ui-step * 8
+                    border-radius: $ui-step * 5
+                    @media screen and ( max-width: 399px )
+                        width: $ui-step * 61
+                    &:focus
+                        transition: .3s linear
+                        font-size: 14px
+                    &:focus::selection
+                        background: #868686
+                    &::selection
+                        background: #a03f3f
+                    &:hover
+                        color: orange
+                        transition: .3s linear
+                        -webkit-transition: all -webkit-transform .3s linear
+                .form-btn
+                    @include button($ui-step * 3.5, $ui-step * 3.5, $ui-step * 3.5, $ui-step * 3.5, $ui-step * 5, 1rem, 700, .48px, 1rem, var(--black-2), var(--white), none)
+                    @media screen and ( max-width: 499px )
+                        max-width: $ui-step * 20
+                        margin: 0 auto
+            .error-message
+                color: red
+                font-size: 14px
+                display: none
+    &-copyright
+        display: flex
+        justify-content: space-between            
+        @include text(1rem, var(--black-2), 400, .48px, 1rem)
+        @media screen and ( max-width: 399px )
+            flex-direction: column
+            row-gap: $ui-step * 2
+        .rules
+            @include text(1rem, var(--black-2), 400, .48px, 1rem)
+            span
+                color: var(--pink)

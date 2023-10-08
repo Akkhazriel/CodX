@@ -5,6 +5,7 @@ import { employersBtnToggle } from "./modules/employersBtn-toggle";
 import { collectionLoad } from "./modules/collection-viewAll";
 import { nftLoad } from "./modules/nft-view";
 import { select } from "./modules/faq-dropdown";
+import { inputsMail } from "./modules/email-inputs";
 
 toggleMenuHeader();
 window.addEventListener('DOMContentLoaded', rebuildMenu);
@@ -21,3 +22,5 @@ collectionLoad();
 nftLoad();
 // FAQ -> Выпадающее меню
 select();
+// Маска для почты
+inputsMail();
